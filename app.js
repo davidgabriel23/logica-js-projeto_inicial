@@ -1,12 +1,30 @@
-// alert('Boas vindas ao jogo do numero secreto');
-// let numeroSecreto = 29;
-// let chute = prompt('Escolha um numero entre 1 e 30')
+alert('Boas vindas ao jogo do numero secreto');
+let numeroSecreto = 29;
+console.log(numeroSecreto);
+let chute ;
+let tentativas = 1;
 
-// if(numeroSecreto == chute) {
-//     alert(`Isso ai você descobriu o numero secreto ${numeroSecreto}`);
-// } else {
-//     alert('você errou :(')
-// }
+
+//enqunto não for ingual a regra do jogo ele ficara rodando
+
+while (chute != numeroSecreto){
+  chute = prompt("Escolha um numero entre 1 e 30");
+
+  // se chute for igual ap numero secreto
+  if (numeroSecreto == chute) {
+    alert(`Isso ai você descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativas`);
+  } else {
+    if (chute > numeroSecreto) {
+      alert(`O número secreto é menor que o ${chute}`);
+    } else {
+      alert(`O número secreto é maior que o ${chute}`);
+    }
+    //tentativas = tentativas + 1;
+    tentativas++;
+  }
+}
+
+
 
 
 // alert('Boas vidas ao nosso site!!!');
@@ -90,10 +108,10 @@
 // }
 
 
-numero = prompt('Digite seu NUMERO');
+// numero = prompt('Digite seu NUMERO');
 
-if(numero %2 === 0){
-    alert('Esse numero é PAR')
-}else{
-    alert('Esse numero é IMPAR')
-}
+// if(numero %2 === 0){
+//     alert('Esse numero é PAR')
+// }else{
+//     alert('Esse numero é IMPAR')
+// }
