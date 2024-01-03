@@ -1,5 +1,6 @@
 alert('Boas vindas ao jogo do numero secreto');
-let numeroSecreto = 29;
+let numeroMaximo = 20;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1 );
 console.log(numeroSecreto);
 let chute ;
 let tentativas = 1;
@@ -8,11 +9,11 @@ let tentativas = 1;
 //enqunto não for ingual a regra do jogo ele ficara rodando
 
 while (chute != numeroSecreto){
-  chute = prompt("Escolha um numero entre 1 e 30");
+  chute = prompt(`Escolha um numero entre 1 a ${numeroMaximo}`);
 
   // se chute for igual ap numero secreto
   if (numeroSecreto == chute) {
-    alert(`Isso ai você descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativas`);
+    break;
   } else {
     if (chute > numeroSecreto) {
       alert(`O número secreto é menor que o ${chute}`);
@@ -23,7 +24,18 @@ while (chute != numeroSecreto){
     tentativas++;
   }
 }
+// forma mais resumida de representar, sem utilizar varios if
 
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`Isso ai você descobriu o numero secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`);
+
+
+// if(tentativas > 1){
+// alert(`Isso ai você descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativas`);
+// }else{
+//   alert(`Isso ai você descobriu o numero secreto ${numeroSecreto} com ${tentativas} tentativa`);
+
+// }
 
 
 
@@ -115,3 +127,40 @@ while (chute != numeroSecreto){
 // }else{
 //     alert('Esse numero é IMPAR')
 // }
+
+
+// contar de 10 ate 0 
+// let contador = 10;
+
+// while(contador >= 1){
+//   console.log(contador);
+//   contador--;
+// }
+
+// contagem regraciva 
+// let contagem = prompt("digite o numero para contagem regreciva");
+
+
+// while(contagem >= 0 ){
+//   console.log(contagem);
+//   contagem--;
+// }
+
+//contagem progressiva
+// let contagem = prompt("digite o numero para contagem regreciva");
+
+// let contador1 = 0;
+
+
+// while(contador1 <= contagem ){
+//   console.log(contagem);
+//   contagem++;
+// }
+
+
+
+// let valor1 = 6;
+// let valor2 = 4;
+
+// let resultado = valor1 + valor2;
+// console.log(resultado);
